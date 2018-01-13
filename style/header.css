@@ -1,0 +1,165 @@
+
+.content {
+	font-size: 100%; 
+	font-family: Arial, Helvetica, sans-serif; 
+	color: silver; 
+}
+
+.footer { 
+	text-align: center;
+	font-size: 70%; 
+	font-family: Arial, Helvetica, sans-serif; 
+	color: silver;
+    font-weight: bold;	
+}
+
+.icon { 
+	border-radius: 30px; 
+	margin: 20px 20px 20px 20px; /* Отступ слева */
+    width: 100px; /* Ширина слоя */
+    background: rgb(100,100,100); /* Цвет фона */
+	break-inside: avoid;
+    padding: 10px; /* Поля вокруг текста */
+}
+
+.layer_box { 
+	column-count: 3;
+}
+
+.content_box { 
+	border-radius: 30px; 
+	font-family: Century Gothic, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	text-shadow: black 2px 3px 4px;
+	color: rgb(255,60,16);
+	text-align: center;
+	margin: 20px 20px 20px 20px; /* Отступ слева */
+    width: 200px; /* Ширина слоя */
+    background: rgb(100,100,100); /* Цвет фона */
+	break-inside: avoid;
+    padding: 10px; /* Поля вокруг текста */
+}
+
+.content_image { 
+	margin: 15px 0 15px 0; /* Отступ слева */
+}
+
+.content_youtube { 
+	border-radius: 10px; 
+	font-family: Century Gothic, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	text-shadow: black 2px 3px 4px;
+	color: rgb(255,60,16);
+	text-align: center;
+	margin: 20px 20px 20px 20px; /* Отступ слева */
+    height: 316px;
+    width: 560px;
+    background: rgb(100,100,100); /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+}
+
+.content_descr { 
+	vertical-align: right;
+	margin: 5px 0 5px 0; /* Отступ слева */
+}
+
+.widget { 
+	height: 200px;
+	width: 400px;
+}
+
+#logo { 
+    position:absolute;
+	top: 5px;
+	float: right;
+	
+	
+}
+
+#creatorsdescription2 {
+    position:absolute;
+	right:10px;
+	top: 10px;
+	float: right;
+	font-size: 80%;
+	font-family: Century Gothic, sans-serif;
+	text-shadow: black 2px 3px 4px;
+	
+}
+
+#creatorsdescription1 {
+    position:absolute;
+	right:111px;
+	top: 10px;
+	float: right;
+	font-size: 80%;
+	font-family: Century Gothic, sans-serif;
+	text-shadow: black 2px 3px 4px;
+	
+}
+#line {
+	margin: 60px 0 0px 0;
+}
+
+#MU_Index {
+	image-rendering: auto;
+	border-radius: 30px; 
+	font-family: Century Gothic, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	text-shadow: black 2px 3px 4px;
+	color: rgb(255,60,16);
+	text-align: center;
+	margin: 20px 20px 20px 20px; /* Отступ слева */
+    width: 500px; /* Ширина слоя */
+    background: rgb(100,100,100); /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+}
+
+#table_crypto {
+	text-align: center;
+
+   
+}
+
+#MUIndex2 {
+	image-rendering: auto;
+	border-radius: 100px; 
+	color: rgb(255,60,16);
+	text-align: center;
+	margin: 20px 30px 50px 470px; /* Отступ слева */
+    width: 500px; /* Ширина слоя */
+	height:500px; /* Высота слоя */
+    background: black; /* Цвет фона (поля) */
+    padding: 10px; /* Поля вокруг текста */
+}
+
+
+.menu_url {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+}
+
+ul.main_menu {
+    margin: 0px 0px 0px 35%; /* Значение отступов */
+    padding: 7px; /* Значение полей */
+   }
+ul.main_menu li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 30px; /* Отступ слева */
+    border: 1px solid #ffffff; /* Рамка вокруг текста */
+    padding: 5px; /* Поля вокруг текста */
+    border-radius: 10px;
+	font-size: 200%;
+	font-family: Century Gothic, sans-serif;
+	float: left;
+	
+	
+   }
+   
+body {
+      width: 100%;
+      min-width: 1024px;
+      max-width: 1920px;
+}
