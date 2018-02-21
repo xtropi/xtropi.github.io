@@ -6,27 +6,37 @@ while(d2-d < ms);
 }
 
 window.onload = function(){
-	main=$("#main")[0];
-	activity=$("#activity")[0];
-	bio=$("#bio")[0];
-	contacts=$("#contacts")[0];
-	maincontent=$(".mainContent")[0];
-	main.onmousedown=function(){
-		var i=0;
-		while(i<1){
-		maincontent.style.opacity=i;
-		i=i+0.01;
-		//wait(100);
-		}
+	mainButton=$("#main")[0];
+	activityButton=$("#activity")[0];
+	bioButton=$("#bio")[0];
+	contactsButton=$("#contacts")[0];
+	main=$(".main");
+	activity=$(".activity");
+	bio=$(".bio");
+	contacts=$(".contacts");
+	mainButton.onclick=function(){
+		main.fadeIn("slow");
+		activity.fadeOut("slow");
+		bio.fadeOut("slow");
+		contacts.fadeOut("slow");
 	};
-	activity.onmousedown=function(){
-		
+	activityButton.onclick=function(){
+		main.fadeOut("slow");
+		activity.fadeIn("slow");
+		bio.fadeOut("slow");
+		contacts.fadeOut("slow");
 	};
-	bio.onmousedown=function(){
-		
+	bioButton.onclick=function(){
+		main.fadeOut("slow");
+		activity.fadeOut("slow");
+		bio.fadeIn("slow");
+		contacts.fadeOut("slow");
 	};
-	contacts.onmousedown=function(){
-		maincontent.style.opacity=0;
+	contactsButton.onclick=function(){
+		main.fadeOut("slow");
+		activity.fadeOut("slow");
+		bio.fadeOut("slow");
+		contacts.fadeIn("slow");
 	};
 
 	
