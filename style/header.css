@@ -11,7 +11,9 @@ body {
 	font-family: 'Titillium Web', sans-serif;
 }
 
-.content {
+.spine {
+	height:500px;
+	width:800px;
 	text-align:center;
     margin: 0 auto;
 	font-size: 100%; 
@@ -69,16 +71,17 @@ background-color:rgb(130,55,130);
 
 .page { 
 	position: absolute;
+
 }
 .main { 
 
 }
 .activity { 
-
+	display:none;
 }
 .bio { 
-
+	display:none;
 }
 .contacts { 
-
+	display:none;
 }
