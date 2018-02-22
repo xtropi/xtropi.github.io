@@ -88,7 +88,7 @@ background-color:rgb(130,55,130);
 	display:none;
 }
 
-.icon { 
+.contactIcon { 
 	border-radius: 30px; 
 	font-family: Century Gothic, sans-serif;
 	font-size: 1em;
@@ -98,6 +98,21 @@ background-color:rgb(130,55,130);
 	text-align: center;
 	margin: 20px 20px 20px 20px; 
     width: 140px;
+    background: rgb(60,60,60);
+	break-inside: avoid;
+    padding: 10px;
+}
+
+.boxIcon { 
+	border-radius: 30px; 
+	font-family: Century Gothic, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	text-shadow: black 2px 3px 4px;
+	color: rgb(255,60,16);
+	text-align: center;
+	margin: 20px 20px 20px 20px; 
+    width: 300px;
     background: rgb(60,60,60);
 	break-inside: avoid;
     padding: 10px;
