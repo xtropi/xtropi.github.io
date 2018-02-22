@@ -6,20 +6,28 @@ while(d2-d < ms);
 }
 
 window.onload = function(){
-	mainButton=$("#main")[0];
+	//MAIN MENU init ++++
+	reload=$(".reload");
 	activityButton=$("#activity")[0];
 	bioButton=$("#bio")[0];
 	contactsButton=$("#contacts")[0];
+	//MAIN MENU init ----
+	
+	//PAGES init ++++
 	main=$(".main");
 	activity=$(".activity");
 	bio=$(".bio");
 	contacts=$(".contacts");
-	mainButton.onclick=function(){
+	//PAGES init ----
+	
+	for(var i=0;i<reload.length;i++){ //for all reload class objects
+	reload[i].onclick=function(){
 		main.fadeIn("slow");
 		activity.fadeOut("slow");
 		bio.fadeOut("slow");
 		contacts.fadeOut("slow");
 	};
+	}
 	activityButton.onclick=function(){
 		main.fadeOut("slow");
 		activity.fadeIn("slow");
