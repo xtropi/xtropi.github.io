@@ -20,12 +20,19 @@ window.onload = function(){
 	contacts=$(".contacts");
 	//PAGES init ----
 	
+	spine=$(".spine");
+	adapt=50;
 	for(var i=0;i<reload.length;i++){ //for all reload class objects
 	reload[i].onclick=function(){
 		main.fadeIn("slow");
 		activity.fadeOut("slow");
 		bio.fadeOut("slow");
 		contacts.fadeOut("slow");
+		spine.animate(
+		{
+			height: $(".main")[0].getBoundingClientRect().height+adapt
+		}, 1000
+		);
 	};
 	}
 	activityButton.onclick=function(){
@@ -33,18 +40,33 @@ window.onload = function(){
 		activity.fadeIn("slow");
 		bio.fadeOut("slow");
 		contacts.fadeOut("slow");
+		spine.animate(
+		{
+			height: $(".activity")[0].getBoundingClientRect().height+adapt
+		}, 1000
+		);
 	};
 	bioButton.onclick=function(){
 		main.fadeOut("slow");
 		activity.fadeOut("slow");
 		bio.fadeIn("slow");
 		contacts.fadeOut("slow");
+		spine.animate(
+		{
+			height: $(".bio")[0].getBoundingClientRect().height+adapt
+		}, 1000
+		);
 	};
 	contactsButton.onclick=function(){
 		main.fadeOut("slow");
 		activity.fadeOut("slow");
 		bio.fadeOut("slow");
 		contacts.fadeIn("slow");
+		spine.animate(
+		{
+			height: $(".contacts")[0].getBoundingClientRect().height+adapt
+		}, 1000
+		);
 	};
 
 	
