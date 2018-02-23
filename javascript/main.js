@@ -1,24 +1,28 @@
+/*
 function wait(ms){
-var d = new Date();
-var d2 = null;
-do { d2 = new Date(); }
-while(d2-d < ms);
+	var d = new Date();
+	var d2 = null;
+	do {
+		d2 = new Date();
+	}
+	while(d2-d < ms);
 }
+*/
 
 window.onload = function(){
-	//MAIN MENU init ++++
+//MAIN MENU init ++++
 	reload=$(".reload");
 	activityButton=$("#activity")[0];
 	bioButton=$("#bio")[0];
 	contactsButton=$("#contacts")[0];
-	//MAIN MENU init ----
+//MAIN MENU init ----
 	
-	//PAGES init ++++
+//PAGES init ++++
 	main=$(".main");
 	activity=$(".activity");
 	bio=$(".bio");
 	contacts=$(".contacts");
-	//PAGES init ----
+//PAGES init ----
 	
 	spine=$(".spine");
 	adapt=50;
