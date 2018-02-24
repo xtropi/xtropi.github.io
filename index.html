@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <!-- Written by Mukhtar Musaev-->
 <html>
-	<head>
+<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<!-- FAVICON ++++ -->
 		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
@@ -18,20 +18,25 @@
 		<script src="jQuery/jquery-3.3.1.min.js"></script>
 		<script type='text/javascript' src='javascript/main.js'></script>
 		<title>Mukhtar Musaev</title>
-	</head>
-	<body background="img/dark-gradient-background.jpg" text="white" vlink="red" link="white">
-		
+</head>
+<body background="img/dark-gradient-background.jpg" text="white" vlink="red" link="white">
 		<div class="header">
 			<div class="heading-header">
-				<h1 class="heading-content reload">Mukhtar Musaev</h1>
+				<h1 class="heading-content reload"><div class="en">Mukhtar Musaev</div><div class="ru">Мухтар Мусаев</div></h1>
+				ENG
+				<label class="switch">
+				  <input id="langSwitch" type="checkbox">
+				  <span class="slider"></span>
+				</label>
+				RU
 			</div>
 			<!-- MAIN MENU ++++ -->
 			<div id="mainmenu">
 			<ul>
-				<li><a id="main" class="reload">Main</a></li>
-				<li><a id="activity">Activity</a></li>
-				<li><a id="bio">Bio</a></li>
-				<li><a id="contacts">Contacts</a></li>
+				<li><a id="main" class="reload"><div class="en">Main</div><div class="ru">Главная</div></a></li>
+				<li><a id="activity"><div class="en">Activity</div><div class="ru">Активность</div></a></li>
+				<li><a id="bio"><div class="en">Bio</div><div class="ru">Биография</div></a></li>
+				<li><a id="contacts"><div class="en">Contacts</div><div class="ru">Контакты</div></a></li>
 			</ul>
 			</div>
 			<!-- MAIN MENU ---- -->
@@ -46,11 +51,16 @@
 		
 			<!-- MAIN PAGE ++++ -->
 			<div class="page main">
-				
+			<div class="en">
 				Hello stranger.<br>
 				You are now on my private internet page.<br> 
 				Feel free.<br>
-				
+			</div>
+			<div class="ru">
+				Приветствую.<br>
+				Вы находитесь на моей персональной странице.<br> 
+				Будьте как дома.<br>
+			</div>
 			</div>
 			<!-- MAIN PAGE ---- -->
 			
@@ -59,30 +69,49 @@
 			<div class="page activity">
 				<a href="https://deeppurp1e.github.io/index.html" target="_blank"><img class="boxIcon" src="img/mulex.png"></a>
 				<div class="textBlock activityText">
-				First experience with Alexander Dryuk.<br>
+				<div class="en">
+				First experience with buddy Alexander Dryuk.<br>
 				(HTML and CSS)
+				</div>
+				<div class="ru">
+				Первый опыт разработки с приятелем Александром Дрюком.<br>
+				(HTML and CSS)
+				</div>
 				</div>
 				<br>
 				
 				<a href="#" class="reload"><img class="boxIcon" src="img/mukhtar_musaev.png"></a>
 				<div class="textBlock activityText">
+				<div class="en">
 				Personal internet page.<br>
 				(JavaScript,jQuery)
 				</div>
+				<div class="ru">
+				Персональная страница.<br>
+				(JavaScript,jQuery)
+				</div>
+				</div>
 				<br>
-				<div class="wordBox">Soon:</div>
+				<div class="wordBox en">Soon:</div>
+				<div class="wordBox ru">Позднее:</div>
 				<br>
 				<a href="https://github.com/iMpLicEMoN/Vortex" target="_blank" class=""><img class="boxIcon" src="img/Vortex.png"></a>
 				<div class="textBlock activityText">
+				<div class="en">
 				Service to group up coop gamers.<br>
 				(NodeJS+MongoDB(otherDB))
+				</div>
+				<div class="ru">
+				Сервис для поиска игроков в кооперативных играх.<br>
+				(NodeJS+MongoDB( или любая другая))
+				</div>
 				</div>
 			</div>
 			<!-- ACTIVITY PAGE ---- -->
 			
 			<!-- BIO PAGE ++++ -->
 			<div class="page bio">
-				<div class="textBlock bioText">
+				<div class="textBlock bioText en">
 					I was born in Surgut, Russia in 1994. Graduated from school in 2011.<br>
 					In 2015 i received a bachelor's degree in applied mathematics and informatics in Surgut State University.<br><br>
 
@@ -91,6 +120,16 @@
 
 					Also unrelated with developing things:<br>
 					Futures trading, reading books about business and personal effectiveness.<br>
+				</div>
+				<div class="textBlock bioText ru">
+					Я родился в Сургуте, Россия, в 1994 году. Закончил школу в 2011 году. <br>
+					В 2015 году я получил степень бакалавра по прикладной математике и информатике в Сургутском государственном университете.
+
+					Российского образования было недостаточно, и с 2018 года я начал активно изучать технологии, которые меня интересуют: <br>
+					HTML, CSS, JS, WEB Framework и немного искусственные нейронные сети с машинным обучением. <br> <br>
+
+					Прочее: <br>
+					Торговля фьючерсами, чтение книг о деловой и личной эффективности. <br>
 				</div>
 				<img class="photo" src="img/person.png">
 			</div>
@@ -110,9 +149,13 @@
 			<!-- CONTACTS PAGE ---- -->
 		</div>
 		
-		<div class="footer"> 
+		<div class="footer en"> 
 			Mukhtar Musaev<br>
 			21.02.2018 
 		</div>
+		<div class="footer ru"> 
+			Мухтар Мусаев<br>
+			21.02.2018 
+		</div>			
 </body>
 </html>

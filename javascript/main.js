@@ -1,16 +1,28 @@
-/*
-function wait(ms){
-	var d = new Date();
-	var d2 = null;
-	do {
-		d2 = new Date();
-	}
-	while(d2-d < ms);
-}
-*/
+'use strict';
+var lang="en";
 
 window.onload = function(){
 	'use strict';
+	var langSwitch=$("#langSwitch");
+	var ruPointer=$(".ru");
+	var enPointer=$(".en");
+
+	function langSet(lang, animTime){
+		if (lang=="en"){
+			for (var i=0;i<enPointer.length;i++){
+				ruPointer[i].style.display="none";
+				enPointer.fadeIn("slow");
+			}
+		} else {
+			for (var i=0;i<enPointer.length;i++){
+				enPointer[i].style.display="none";
+				ruPointer.fadeIn("slow");
+			}
+		}
+	};
+	
+	langSet(lang, 0);
+
 //MAIN MENU init ++++
 	var reload=$(".reload");
 	var activityButton=$("#activity")[0];
@@ -19,6 +31,7 @@ window.onload = function(){
 //MAIN MENU init ----
 	
 //PAGES init ++++
+	
 	var main=$(".main");
 	var activity=$(".activity");
 	var bio=$(".bio");
@@ -74,7 +87,16 @@ window.onload = function(){
 		);
 	};
 
-	
-	
-	
+	langSwitch[0].onclick=function(){
+		if (lang=="en"){
+			lang="ru";
+			langSet(lang, 1000);
+		} else {
+			lang="en";
+			langSet(lang, 1000);
+		}
+		
+	}
+
 };
+
