@@ -10,22 +10,23 @@ function wait(ms){
 */
 
 window.onload = function(){
+	'use strict';
 //MAIN MENU init ++++
-	reload=$(".reload");
-	activityButton=$("#activity")[0];
-	bioButton=$("#bio")[0];
-	contactsButton=$("#contacts")[0];
+	var reload=$(".reload");
+	var activityButton=$("#activity")[0];
+	var bioButton=$("#bio")[0];
+	var contactsButton=$("#contacts")[0];
 //MAIN MENU init ----
 	
 //PAGES init ++++
-	main=$(".main");
-	activity=$(".activity");
-	bio=$(".bio");
-	contacts=$(".contacts");
+	var main=$(".main");
+	var activity=$(".activity");
+	var bio=$(".bio");
+	var contacts=$(".contacts");
 //PAGES init ----
 	
-	spine=$(".spine");
-	adapt=50;
+	var spine=$(".spine");
+	var adapt=50;
 	for(var i=0;i<reload.length;i++){ //for all reload class objects
 	reload[i].onclick=function(){
 		main.fadeIn("slow");
