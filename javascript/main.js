@@ -41,17 +41,17 @@ window.onload = function(){
 	var spine=$(".spine");
 	var adapt=50;
 	for(var i=0;i<reload.length;i++){ //for all reload class objects
-	reload[i].onclick=function(){
-		main.fadeIn("slow");
-		activity.fadeOut("slow");
-		bio.fadeOut("slow");
-		contacts.fadeOut("slow");
-		spine.animate(
-		{
-			height: $(".main")[0].getBoundingClientRect().height+adapt
-		}, 1000
-		);
-	};
+		reload[i].onclick=function(){
+			main.fadeIn("slow");
+			activity.fadeOut("slow");
+			bio.fadeOut("slow");
+			contacts.fadeOut("slow");
+			spine.animate(
+			{
+				height: $(".main")[0].getBoundingClientRect().height+adapt
+			}, 1000
+			);
+		};
 	}
 	activityButton.onclick=function(){
 		main.fadeOut("slow");
