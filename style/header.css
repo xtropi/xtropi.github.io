@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
    
 body {
-
+margin:0;
+padding:0;
 }
 
 .ru  {
-	
+	display:none;
 }
 
 .header{
@@ -60,7 +61,8 @@ background: rgb(50,30,50);
 position: relative;
 overflow:hidden;
 height:80px;
-margin:5px 0
+margin:5px 0;
+break-inside: avoid;
 }
 #mainmenu ul {
 list-style:none;

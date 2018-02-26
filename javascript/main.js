@@ -21,7 +21,7 @@ window.onload = function(){
 		}
 	};
 	
-	langSet(lang, 0);
+	//langSet(lang, 0);
 
 //MAIN MENU init ++++
 	var reload=$(".reload");
