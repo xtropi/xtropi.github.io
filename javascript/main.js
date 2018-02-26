@@ -3,7 +3,7 @@ var lang="en";
 
 window.onload = function(){
 	'use strict';
-	var langSwitch=$("#langSwitch");
+	var langSwitch=$("#langSwitch")[0];
 	var ruPointer=$(".ru");
 	var enPointer=$(".en");
 
@@ -87,7 +87,9 @@ window.onload = function(){
 		);
 	};
 
-	langSwitch[0].onclick=function(){
+	langSwitch.onclick=function(){
+
+		langSwitch.disabled=true;
 		if (lang=="en"){
 			lang="ru";
 			langSet(lang, 1000);
@@ -95,8 +97,12 @@ window.onload = function(){
 			lang="en";
 			langSet(lang, 1000);
 		}
-		
+		setTimeout(function(){
+			langSwitch.disabled=false;
+		},2000) 
 	}
+	
+
 
 };
 
