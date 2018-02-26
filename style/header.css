@@ -147,27 +147,20 @@ input:checked + .slider:before {
 }
 /* The switch ---- */
 
-.page { 
-	width: 800px;
-	vertical-align: middle;
-	text-align:center;
-    margin: 0 auto;
-}
+
 .main { 
 	text-align: center;
 	font-weight: bold;
 	font-size: 150%;
 }
-.activity { 
+.activity, .bio, .contacts { 
 	display:none;
+	width: 800px;
+	vertical-align: middle;
+	text-align:center;
+    margin: 0 auto;
 }
-.bio { 
-	display:none;
-	
-}
-.contacts { 
-	display:none;
-}
+
 
 .contactIcon { 
 	border-radius: 30px; 
