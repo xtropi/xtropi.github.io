@@ -197,7 +197,7 @@ input:checked + .slider:before {
 	color: rgb(255,60,16);
 	text-align: center;
 	margin: 0px 0px 0px 0px; 
-    width: 150px;
+    width: 230px;
     /*background: rgb(60,60,60);   */
 	break-inside: avoid;
     padding: 0px; /* Поля вокруг текста */
@@ -214,7 +214,7 @@ input:checked + .slider:before {
 }
 
 .bio table{
-	width: 700px;
+	width: 800px;
 	margin: 0 auto;
     padding:0;
 }
@@ -222,7 +222,9 @@ input:checked + .slider:before {
 .bio table tr td:first-child{
 	text-align: left;
 }
-
+.bio table tr td:nth-child(2){
+	vertical-align:top;
+}
 p:first-letter {
 	padding-left: 1.5em;
 }
