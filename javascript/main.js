@@ -1,6 +1,5 @@
 'use strict';
 var lang="en";
-
 window.onload = function(){
 	'use strict';
 	var langSwitch=$("#langSwitch")[0];
@@ -21,7 +20,9 @@ window.onload = function(){
 		}
 	};
 	
-	//langSet(lang, 0);
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$("body")[0].style.zoom = "150%";
+	}
 
 //MAIN MENU init ++++
 	var reload=$(".reload");
@@ -36,55 +37,44 @@ window.onload = function(){
 	var activity=$(".activity");
 	var bio=$(".bio");
 	var contacts=$(".contacts");
+	var footer=$(".footer");
 //PAGES init ----
 	
-	var spine=$(".spine");
+	var content=$(".content");
 	var adapt=50;
 	for(var i=0;i<reload.length;i++){ //for all reload class objects
 		reload[i].onclick=function(){
+			footer[0].style.display="none";
+			activity[0].style.display="none";
+			bio[0].style.display="none";
+			contacts[0].style.display="none";
 			main.fadeIn("slow");
-			activity.fadeOut("slow");
-			bio.fadeOut("slow");
-			contacts.fadeOut("slow");
-			spine.animate(
-			{
-				height: $(".main")[0].getBoundingClientRect().height+adapt
-			}, 1000
-			);
+			footer.fadeIn("slow");
 		};
 	}
 	activityButton.onclick=function(){
-		main.fadeOut("slow");
+		footer[0].style.display="none";
+		main[0].style.display="none";
+		bio[0].style.display="none";
+		contacts[0].style.display="none";
 		activity.fadeIn("slow");
-		bio.fadeOut("slow");
-		contacts.fadeOut("slow");
-		spine.animate(
-		{
-			height: $(".activity")[0].getBoundingClientRect().height+adapt
-		}, 1000
-		);
+		footer.fadeIn("slow");
 	};
 	bioButton.onclick=function(){
-		main.fadeOut("slow");
-		activity.fadeOut("slow");
+		footer[0].style.display="none";
+		main[0].style.display="none";
+		activity[0].style.display="none";
+		contacts[0].style.display="none";
 		bio.fadeIn("slow");
-		contacts.fadeOut("slow");
-		spine.animate(
-		{
-			height: $(".bio")[0].getBoundingClientRect().height+adapt
-		}, 1000
-		);
+		footer.fadeIn("slow");
 	};
 	contactsButton.onclick=function(){
-		main.fadeOut("slow");
-		activity.fadeOut("slow");
-		bio.fadeOut("slow");
+		footer[0].style.display="none";
+		main[0].style.display="none";
+		activity[0].style.display="none";
+		bio[0].style.display="none";
 		contacts.fadeIn("slow");
-		spine.animate(
-		{
-			height: $(".contacts")[0].getBoundingClientRect().height+adapt
-		}, 1000
-		);
+		footer.fadeIn("slow");
 	};
 
 	langSwitch.onclick=function(){
