@@ -61,6 +61,7 @@ overflow:hidden;
 height:65px;
 margin:5px 0;
 break-inside: avoid;
+cursor: default;
 }
 #mainmenu ul {
 list-style:none;
