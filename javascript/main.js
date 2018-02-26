@@ -21,7 +21,7 @@ window.onload = function(){
 	};
 	
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		$("body")[0].style.zoom = "150%";
+		$("body")[0].style.zoom = "100%";
 	}
 
 //MAIN MENU init ++++

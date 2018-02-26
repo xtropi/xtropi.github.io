@@ -229,12 +229,6 @@ input:checked + .slider:before {
     margin: 50px 0px 0px 20px; 
 }
 
-.activityText { 
-    width: 300px;
-	margin: 0;
-    padding:0;
-}
-
 .activity table{
 	width: 600px;
 	margin: 0 auto;
