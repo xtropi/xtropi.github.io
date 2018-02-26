@@ -215,8 +215,10 @@ input:checked + .slider:before {
 
 .bio table{
 	width: 800px;
+	height: 460px;
 	margin: 0 auto;
     padding:0;
+	font-size: 100%;
 }
 
 .bio table tr td:first-child{
