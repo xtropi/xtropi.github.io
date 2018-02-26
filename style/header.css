@@ -69,7 +69,7 @@ padding:0;
 position: relative;
 left:50%;
 float:left;
-font:20px;
+font-size: 120%;
 height:30px
 }
 #mainmenu ul li {
