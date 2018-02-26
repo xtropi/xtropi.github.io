@@ -203,24 +203,6 @@ input:checked + .slider:before {
     padding: 0px; /* Поля вокруг текста */
 }
 
-.textBlock { 
-	position: relative;
-	float:left; 
-	/*color: rgb(255,60,16);*/
-	text-align: left;
-	margin: 1px 1px 1px 20px; 
-    /*background: rgb(60,60,60);   */
-	break-inside: avoid;
-    padding: 0;
-}
-
-.wordBox { 
-	font-weight: bold;
-	color: rgb(255,60,16);
-	text-align: left;
-    margin: 50px 0px 0px 20px; 
-}
-
 .activity table{
 	width: 600px;
 	margin: 0 auto;
@@ -231,8 +213,14 @@ input:checked + .slider:before {
 	text-align: left;
 }
 
-.bioText { 
-    width: 50%;
+.bio table{
+	width: 700px;
+	margin: 0 auto;
+    padding:0;
+}
+
+.bio table tr td:first-child{
+	text-align: left;
 }
 
 p:first-letter {
