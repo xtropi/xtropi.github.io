@@ -214,7 +214,7 @@ input:checked + .slider:before {
 }
 
 .bio table{
-	width: 800px;
+	width: 700px;
 	height: 460px;
 	margin: 0 auto;
     padding:0;
