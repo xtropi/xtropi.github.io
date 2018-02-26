@@ -17,6 +17,7 @@ body {
     margin: 0 auto;
     padding:0px;
 	font-size: 100%;
+	cursor: default;
 }
 
 .heading-header{
@@ -61,7 +62,6 @@ overflow:hidden;
 height:65px;
 margin:5px 0;
 break-inside: avoid;
-cursor: default;
 }
 #mainmenu ul {
 list-style:none;
