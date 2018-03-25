@@ -224,9 +224,11 @@ input:checked + .slider:before {
 .bio table tr td:first-child{
 	text-align: left;
 }
+/*
 .bio table tr td:nth-child(2){
 	vertical-align:top;
 }
+*/
 p:first-letter {
 	padding-left: 1.5em;
 }
