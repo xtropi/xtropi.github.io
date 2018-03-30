@@ -6,7 +6,7 @@ body {
 	min-width: 800px;
 	height: 100%;
 	font-family: 'Titillium Web', sans-serif;
-	background: linear-gradient(to top, #6e2969,#000000 );
+	background: linear-gradient(to top, #591d61,#000000 );
 }
 
 .ru  {
@@ -233,7 +233,4 @@ input:checked + .slider:before {
 */
 p:first-letter {
 	padding-left: 1.5em;
-}
-
-.reload {
 }
