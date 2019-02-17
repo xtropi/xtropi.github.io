@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 
-html, body {
+html, body, #root{
   margin: 0;
   padding: 0;
 	height: 100%;

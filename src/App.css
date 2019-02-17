@@ -2,11 +2,19 @@
   text-align: center;
   min-width: 320px;
   min-height: 880px;
+
   font-family: 'Titillium Web', sans-serif;
-  color: silver; 
+  color: rgb(0, 0, 0); 
+  font-size: 1.2em;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.logo{
+  font-size: 3em;
+  font-weight: bold;
+  color: silver; 
 }
