@@ -30,25 +30,40 @@ class App extends Component {
 		<section className="section">
 			<div className="container">
 				<div className="columns">
-					<div className="column">
+					<div className="column is-one-fifth-desktop">
+
 						<article className="media notification">
 							<div className="media-content">
-								<div className="content">
-                <figure className="image is-128x128">
-                  <img className="is-rounded" src="img/person2.png" alt="thats me =)"/>
+                <figure className="image is-128x128 person">
+                  <img className="" src="img/person2.png" alt="thats me =)"/>
                 </figure>
                 <br/><br/>
-                <div className="has-text-left is-size-3">
+                <div className="has-text-left is-size-4">
                   Musaev
                   Mukhtar
                   Ruslanovich
 					      </div>
-
-								</div>
 							</div>
 						</article>
+
+            <article className="media notification">
+							<div className="media-content">
+              <h1 className="title is-size-4">Experience</h1>
+              <ul>
+                <li>
+                  <span className="tag is-success" style={{minWidth: "100px", marginRight: "5px"}}>2017 - </span>
+                  <a href="https://www.surgutneftegas.ru/en/" target="_blank" rel="noreferrer noopener">Surgutneftegas</a>
+                  <span> - </span>
+                  <span>Software Engineer</span>
+                </li>
+              </ul>
+							</div>
+						</article>
+
 					</div>
+
 					<div className="column">
+
 						<article className="media notification">
 							<div className="media-content">
 								<div className="content">
@@ -65,8 +80,10 @@ class App extends Component {
 								</div>
 							</div>
 						</article>
+
 					</div>
 					<div className="column">
+
 						<article className="media notification tile">
 							<div className="media-content">
 								<div className="content">
@@ -85,6 +102,7 @@ class App extends Component {
 								</div>
 							</div>
 						</article>
+
 					</div>
 				</div>
 			</div>
@@ -92,7 +110,7 @@ class App extends Component {
 
 
 
-
+{/* 
 		<section className="section">
 			<div className="container">
 				<div className="columns is-multiline">
@@ -105,7 +123,7 @@ class App extends Component {
 							</figure>
 							<div className="media-content">
 								<div className="content">
-									<h1 className="title is-size-4">Columns</h1>
+									<h1 className="title is-size-4">Javascript</h1>
 									<p className="subtitle is-size-5">
 										The power of <strong>Flexbox</strong> in a simple interface
 									</p>
@@ -200,7 +218,7 @@ class App extends Component {
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> */}
 
 
 
@@ -213,6 +231,19 @@ class App extends Component {
         <Bio />
         <PBio />
         <Contacts /> */}
+
+
+
+<footer className="footer">
+  <div className="content has-text-centered">
+      <a href="https://github.com/iMpLicEMoN" target="_blank" rel="noreferrer noopener"><i className="ic fab fa-4x fa-github-alt"></i></a>
+      <a href="https://vk.com/id243538645" target="_blank" rel="noreferrer noopener"><i className="ic fab fa-4x fa-vk"></i></a>
+      <a href="https://t.me/iMpLicEMoN" target="_blank" rel="noreferrer noopener"><i className="ic fab fa-4x fa-telegram-plane"></i></a>
+      <a href="mailto:mukhtarmusaev@yandex.ru" target="_blank" rel="noreferrer noopener"><i className="ic fas fa-4x fa-envelope"></i></a>
+      
+  </div>
+</footer>
+
 
       </div>
     );

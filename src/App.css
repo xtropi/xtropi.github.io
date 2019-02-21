@@ -14,12 +14,30 @@
 }
 
 .logo{
-  /* font-size: 3em; */
   font-weight: bold;
   color: rgb(0, 0, 0); 
   text-align: center;
 }
 
-/* .photo{
-  max-width: 180px;
-} */
+ .footer{
+  background-color: white;
+}
+
+.ic{
+  color:rgb(54, 54, 54);
+  margin: 10px;
+}
+
+.ic:hover{
+  color:rgb(40, 36, 255);
+}
+
+.person{
+  transition: transform 0.5s ease;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
