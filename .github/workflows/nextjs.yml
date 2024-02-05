@@ -32,6 +32,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          sparse-checkout: |
+            .github
+            src
           clean: false
       - name: Detect package manager
         id: detect-package-manager
