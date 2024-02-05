@@ -78,7 +78,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Logs
-        run: ls
+        run: ls ../ -a
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
