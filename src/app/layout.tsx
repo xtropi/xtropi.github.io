@@ -26,6 +26,12 @@ export default function RootLayout({
             <li>
               <Link href="/solana-validator">Solana Validator</Link>
             </li>
+            <li>
+              <Link href="/community">Community</Link>
+            </li>
+            <li>
+              <Link href="/analytics">Analytics</Link>
+            </li>
           </ul>
         </nav>
         {children}
