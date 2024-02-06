@@ -73,12 +73,12 @@ export default function RootLayout({
                 <figure style={logoStyle}>
                   {collapsed ? 'Mu' : 'Mukh.tar'}
                 </figure>
-                <Menu theme="dark" defaultSelectedKeys={['0']} mode="inline" >
+                <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" >
                   <Menu.Item key="0" icon={<UserOutlined />}>
-                    <Link href="/">About</Link>
+                    <Link href="/about">About</Link>
                   </Menu.Item>
                   <Menu.Item key="1" icon={<DeploymentUnitOutlined />}>
-                    <Link href="/solana-validator">Solana Validator</Link>
+                    <Link href="/">Solana Validator</Link>
                   </Menu.Item>
                   <Menu.Item key="2" icon={<UsergroupAddOutlined />}>
                     <Link href="/community">Community</Link>

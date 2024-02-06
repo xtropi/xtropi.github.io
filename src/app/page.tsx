@@ -1,55 +1,26 @@
 "use client"
-// import Image from "next/image";
-// import styles from "./page.module.css";
-import { Space, Typography } from 'antd';
 
-const { Text, Link } = Typography;
-
-const data = {
-  "name": "Mukhtar",
-  "gender": "male",
-  "birth_date": "1994-06-11",
-  "height": "177cm",
-  "right_handed": true,
-  "birth_coords": "61.266235, 73.364072",
-  "languages": ["ru", "en"],
-  "email": "mukh.musaev@gmail.com",
-  "url": "https://xtropi.github.io/",
-  "activities": [
-    "crypto economics",
-    "web development",
-    "gym",
-    "stocks investing",
-    "PC gaming",
-    "futures trading",
-    "existence philosophy",
-  ],
-  "skills": {
-    "webDevelopment": [
-      "React",
-      "NextJS",
-      "JavaScript"
-    ],
-    "backend": [
-      "Node.js",
-      "SQL (PostgreSQL)",
-      "NoSQL (MongoDB)",
-    ],
-    "business": [
-      "GitLab",
-      "Atlassian Jira/Confluence"
-    ]
-  }
-}
-
-export default function Home() {
+import { Divider, Space, Typography } from "antd";
+import Link from "next/link";
+const { Text, Link: UiLink, Title } = Typography;
+export default function Component() {
   return (
     <main>
+      <Title level={4}>
+        Solana validator information such as location, hardware, software, total stake, APY
+      </Title>
+      <Divider />
       <Text>
-        <pre style={{ fontSize: 'smaller' }}>
-          {JSON.stringify(data, null, 2).trim()}
-        </pre>
+        CPU: AMD EPYC 32 Core 3.2 GHz<br />
+        Memory: 512 GB<br />
+        Location: London, England<br />
+        Operating System: Ubuntu 20.x<br />
       </Text>
+      <Divider />
+      <Space direction="vertical">
+        <Link target="_blank" href={'https://solana.org/sfdp-validators/EbTx1su8tBFdt8fhYaKYEDyrU5iVQp3DQfPHpsaRv8qu'}>TDS22</Link>
+        <Link target="_blank" href={'https://metrics.stakeconomy.com/d/f2b2HcaGz/solana-community-validator-dashboard?orgId=1&refresh=1m&var-pubkey=G5Q3EBSkTg4xw72nJr5aoYP8zRdAFZaKGEozpFZtFRu7&var-server=Mukh.tar&var-inter=1m&var-netif=eth0&var-version=&from=now-7d&to=now'}>Grafana Dashboard</Link>
+      </Space>
     </main>
   );
 }
