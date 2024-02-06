@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import { DeploymentUnitOutlined, UserOutlined, UsergroupAddOutlined } from '@ant-design/icons';
+import { DeploymentUnitOutlined, MonitorOutlined, UserOutlined, UsergroupAddOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { App, Menu, Breadcrumb, Layout, theme, ConfigProvider } from "antd";
 import { CSSProperties, useState } from "react";
@@ -30,29 +30,6 @@ const logoStyle: CSSProperties = {
 }
 
 const { Header, Content, Footer, Sider } = Layout;
-type MenuItem = Required<MenuProps>['items'][number];
-
-function getItem(
-  label: React.ReactNode,
-  key: React.Key,
-  icon?: React.ReactNode,
-  children?: MenuItem[],
-  type?: 'group',
-): MenuItem {
-  return {
-    key,
-    icon,
-    children,
-    label,
-    type,
-  } as MenuItem;
-}
-
-const items: MenuProps['items'] = [
-  getItem(<Link href="/">About</Link>, '0', <UserOutlined />),
-  getItem(<Link href="/solana-validator">Solana Validator</Link>, '1', <DeploymentUnitOutlined />),
-  getItem(<Link href="/community">Community</Link>, '2', <UsergroupAddOutlined />),
-]
 
 export default function RootLayout({
   children,
@@ -64,7 +41,7 @@ export default function RootLayout({
     console.log('click ', e);
   };
 
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -79,7 +56,13 @@ export default function RootLayout({
             },
             components: {
               Menu: {
-                darkItemSelectedBg: 'rgba(255, 100, 255, 0.2)'
+                darkItemSelectedBg: 'rgba(255, 100, 255, 0.2)',
+                iconSize: 30,
+                collapsedIconSize: 30,
+                // itemMarginBlock: 0,
+                // itemMarginInline: 10,
+                // iconMarginInlineEnd: 50,
+                itemHeight: 60,
               },
             },
           }}
@@ -88,17 +71,26 @@ export default function RootLayout({
             <Layout style={{ minHeight: '100vh' }}>
               <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
                 <figure style={logoStyle}>
-                {collapsed ? 'Mu' : 'Mukh.tar'}
+                  {collapsed ? 'Mu' : 'Mukh.tar'}
                 </figure>
-                <Menu theme="dark" defaultSelectedKeys={['0']} mode="inline" items={items} />
+                <Menu theme="dark" defaultSelectedKeys={['0']} mode="inline" >
+                  <Menu.Item key="0" icon={<UserOutlined />}>
+                    <Link href="/">About</Link>
+                  </Menu.Item>
+                  <Menu.Item key="1" icon={<DeploymentUnitOutlined />}>
+                    <Link href="/solana-validator">Solana Validator</Link>
+                  </Menu.Item>
+                  <Menu.Item key="2" icon={<UsergroupAddOutlined />}>
+                    <Link href="/community">Community</Link>
+                  </Menu.Item>
+                  <Menu.Item key="3" icon={<MonitorOutlined />}>
+                    <Link href="/analytics">Analytics</Link>
+                  </Menu.Item>
+                </Menu>
               </Sider>
               <Layout>
-                <Header style={{ padding: '0', background: colorBgContainer }} />
+                {/* <Header style={{ padding: '0', background: colorBgContainer }} /> */}
                 <Content style={{ margin: '0 16px' }}>
-                  {/* <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>User</Breadcrumb.Item>
-            <Breadcrumb.Item>Bill</Breadcrumb.Item>
-          </Breadcrumb> */}
                   <div
                     style={{
                       padding: 24,
@@ -111,9 +103,9 @@ export default function RootLayout({
                     {children}
                   </div>
                 </Content>
-                {/* <Footer style={{ textAlign: 'center' }}>
-          Ant Design ©{new Date().getFullYear()} Created by Ant UED
-        </Footer> */}
+                <Footer style={{ textAlign: 'center' }}>
+                  © 2024
+                </Footer>
               </Layout>
             </Layout>
 
