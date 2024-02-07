@@ -13,7 +13,7 @@ export default function Component() {
       <Text>
         Edgevana server
         <br />CPU: AMD EPYC 32 Core 3.2 GHz
-        <br />Memory: 512 GB SSD
+        <br />RAM: 512 GB
         <br />Location: London, England
         <br />Operating System: Ubuntu 20.x
         <br />Security - DDOS Protection
