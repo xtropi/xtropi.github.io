@@ -59,8 +59,8 @@ export default function Component() {
           </Text>
           <Text italic>
             <br />
-            "A rising tide floats all boats….. only when the tide goes out do
-            you discover who's been swimming naked."
+            &#34;A rising tide floats all boats….. only when the tide goes out do
+            you discover who&#39;s been swimming naked.&#34;
           </Text>
         </Collapse.Panel>
         <Collapse.Panel header={<Title level={4}>Statement</Title>} key="1">
