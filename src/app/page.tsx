@@ -7,14 +7,17 @@ export default function Component() {
   return (
     <main>
       <Title level={4}>
-        Solana validator information such as location, hardware, software, total stake, APY
+        Solana validator [Testnet]
       </Title>
       <Divider />
       <Text>
-        CPU: AMD EPYC 32 Core 3.2 GHz<br />
-        Memory: 512 GB<br />
-        Location: London, England<br />
-        Operating System: Ubuntu 20.x<br />
+        Edgevana server
+        <br />CPU: AMD EPYC 32 Core 3.2 GHz
+        <br />Memory: 512 GB SSD
+        <br />Location: London, England
+        <br />Operating System: Ubuntu 20.x
+        <br />Security - DDOS Protection
+        <br />Network - 1 Gbps pipe with 300 Mbps commit, burstable
       </Text>
       <Divider />
       <Space direction="vertical">

@@ -10,9 +10,10 @@ const createLink = (value: string)=>{
 export default function Component() {
   return (
     <main>
-      <Title level={4}>Community list</Title>
+      <Title level={4}>Community links</Title>
       <Divider />
       Growing proven guys:
+      <br/>*soon*
       <Divider />
       Already big guys (200.000+ SOL):
       <li>{createLink('https://margus.one/')}</li>
@@ -20,6 +21,8 @@ export default function Component() {
       <li>{createLink('https://www.shinobi-systems.com/')}</li>
       <li>{createLink('https://www.leapfrog.systems/')}</li>
       <li>{createLink('https://www.block-smith.com/')}</li>
+      <li>{createLink('https://marinade.finance/')}</li>
+      <li>{createLink('https://www.jito.network/')}</li>
     </main>
   );
 }
