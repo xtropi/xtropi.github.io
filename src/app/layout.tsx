@@ -10,7 +10,7 @@ import {
   UserOutlined,
   UsergroupAddOutlined,
 } from "@ant-design/icons";
-import type { MenuProps } from "antd";
+import type { MenuProps, ThemeConfig } from "antd";
 import { App, Menu, Breadcrumb, Layout, theme, ConfigProvider } from "antd";
 import { CSSProperties, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -46,34 +46,40 @@ export default function RootLayout({
     console.log("click ", e);
   };
 
-  const [collapsed, setCollapsed] = useState(true);
-  const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken();
+  const [collapsed, setCollapsed] = useState(false);
 
+  const config: ThemeConfig = {
+    algorithm: theme.darkAlgorithm,
+    token: {
+      fontFamily: "'Titillium Web', sans-serif",
+      fontSize: 16,
+      colorText: "rgb(200, 200, 200)",
+      colorPrimary: "#722ed1",
+      colorInfo: "#722ed1"
+    },
+    components: {
+      Layout:{
+
+      },
+      Menu: {
+        iconSize: 30,
+        collapsedIconSize: 30,
+        itemHeight: 60,
+      },
+    },
+  };
+
+  const { getDesignToken } = theme;
+  const globalToken = getDesignToken(config);
+  const { colorBgContainer, borderRadiusLG } = globalToken;
+  
   const pathname = usePathname();
 
   return (
     <html lang="en">
       <body className={inter.className}>
         <ConfigProvider
-          theme={{
-            token: {
-              fontFamily: "'Titillium Web', sans-serif",
-              fontSize: 16,
-            },
-            components: {
-              Menu: {
-                darkItemSelectedBg: "rgba(255, 100, 255, 0.2)",
-                iconSize: 30,
-                collapsedIconSize: 30,
-                // itemMarginBlock: 0,
-                // itemMarginInline: 10,
-                // iconMarginInlineEnd: 50,
-                itemHeight: 60,
-              },
-            },
-          }}
+          theme={config}
         >
           <App>
             <Layout style={{ minHeight: "100vh" }}>
