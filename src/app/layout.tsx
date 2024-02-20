@@ -3,7 +3,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
+// import Link from "next/link";
 import {
   DeploymentUnitOutlined,
   MonitorOutlined,
@@ -11,7 +11,8 @@ import {
   UsergroupAddOutlined,
 } from "@ant-design/icons";
 import type { MenuProps, ThemeConfig } from "antd";
-import { App, Menu, Breadcrumb, Layout, theme, ConfigProvider } from "antd";
+import { App, Menu, Breadcrumb, Layout, theme, ConfigProvider, Typography } from "antd";
+const { Link } = Typography;
 import { CSSProperties, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -49,17 +50,19 @@ export default function RootLayout({
   const [collapsed, setCollapsed] = useState(false);
 
   const config: ThemeConfig = {
-    algorithm: theme.darkAlgorithm,
+    // algorithm: theme.darkAlgorithm,
     token: {
       fontFamily: "'Titillium Web', sans-serif",
       fontSize: 16,
-      colorText: "rgb(200, 200, 200)",
+      // colorText: "rgb(200, 200, 200)",
       colorPrimary: "#722ed1",
-      colorInfo: "#722ed1"
+      colorInfo: "#722ed1",
+      colorBgBase: "rgb(180, 180, 180)",
     },
     components: {
-      Layout:{
-
+      Typography: {
+        colorLink: "rgb(22, 119, 255)",
+        colorLinkHover: "rgb(255, 255, 255)"
       },
       Menu: {
         iconSize: 30,
