@@ -1,22 +1,42 @@
-"use client"
-import { Divider, Space, Typography } from 'antd';
-import React from 'react';
+"use client";
+import { Divider, List, Skeleton, Typography } from "antd";
+import { useCallback } from "react";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 const { Title } = Typography;
 export default function Component() {
-  
-  React.useEffect(() => {
-    const s = document.createElement("script");
-    s.setAttribute("src", "https://platform.twitter.com/widgets.js");
-    s.setAttribute("async", "true");
-    document.head.appendChild(s);
+  const renderSkelLists = useCallback((n: number) => {
+    if (n < 0) return;
+    const resultArr = [];
+    for (let i = 0; i <= n; i++) {
+      resultArr.push(
+        <List.Item.Meta key={"skel" + i} avatar title description />
+      );
+    }
+    return resultArr;
   }, []);
+
+  const TwitterSkeleton = (
+    <Skeleton loading active avatar>
+      {renderSkelLists(5)}
+    </Skeleton>
+  );
 
   return (
     <main>
-      <Title level={4}>Personal-blog styled analitycs for stakers *Under development*</Title>
+      <Title level={4}>
+        Personal-blog styled analitycs for stakers *Under development*
+      </Title>
       <Divider />
 
-      <a className="twitter-timeline" data-theme="dark" href="https://twitter.com/mukh___tar?ref_src=twsrc%5Etfw">Tweets by mukh___tar</a>
+      <TwitterTimelineEmbed
+        sourceType="profile"
+        screenName="mukh___tar"
+        tweetLimit={2}
+        placeholder={TwitterSkeleton}
+        theme="dark"
+        // autoHeight
+        options={{ height: 800, width: 800 }}
+      />
     </main>
   );
 }

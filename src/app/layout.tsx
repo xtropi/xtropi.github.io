@@ -57,7 +57,7 @@ export default function RootLayout({
       // colorText: "rgb(200, 200, 200)",
       colorPrimary: "#722ed1",
       colorInfo: "#722ed1",
-      colorBgBase: "rgb(180, 180, 180)",
+      colorBgBase: "rgb(220, 220, 220)",
     },
     components: {
       Typography: {
